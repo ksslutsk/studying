@@ -1,3 +1,4 @@
+if(false){
 //for()
 for (let index = 0; index < 3; index++){
     console.log(`for() index: ${index}`)
@@ -92,5 +93,4 @@ let str = "book";
 for (const s of str){
     console.log(s);
 }
-
-
+}
