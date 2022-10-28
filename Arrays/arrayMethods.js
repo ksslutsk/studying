@@ -1,3 +1,4 @@
+if(false) {
 //створеня масивів
 //from створює масиви з масивоподібних елементів (з length та індексами)
 function f(){
@@ -50,3 +51,4 @@ console.log(arr.reduce((prev, curr) => {
     //console.log(`${prev}\t${curr}`);
     return prev + curr;
 }), initialVal)
+}
