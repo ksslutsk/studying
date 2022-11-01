@@ -36,9 +36,11 @@ delete stepan.isHuman;
 console.log(person.isHuman);
 console.log(stepan.isHuman);
 console.log(stepan);
-console.log(stepan.hasOwnProperty("isHuman"));
+console.log(stepan.hasOwnProperty("isHuman"));//hasOwnProperty показуєчи чи ця властивість свояа не унаслідувана
 
 //вираховувані поля, в поле можна закинути змінну
 let fruit = 'apple';
 const bag = { [fruit]: 5 };
 console.log(bag.apple); //спрацює тільки якщо відповідь apple
+//на властивостях є прапор enumerable який дає знати чи буде властивісь перечилятись в 
+//for...in чи ні
