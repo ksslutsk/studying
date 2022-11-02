@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=UGapN-hrekw&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=3&t=393s
+https://www.youtube.com/watch?v=M_pclb-58ZY&t=2835s
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/const
+https://developer.mozilla.org/en-US/docs/Glossary/Scope?retiredLocale=uk
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/var
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
