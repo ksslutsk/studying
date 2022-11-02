@@ -1,0 +1,2 @@
+IIFE
+https://www.javascripttutorial.net/javascript-immediately-invoked-function-expression-iife/

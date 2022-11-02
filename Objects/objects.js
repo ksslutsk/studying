@@ -1,3 +1,4 @@
+if(false) {
 //створення обʼєкта
 let person = {
     name: 'tomas',
@@ -44,3 +45,4 @@ const bag = { [fruit]: 5 };
 console.log(bag.apple); //спрацює тільки якщо відповідь apple
 //на властивостях є прапор enumerable який дає знати чи буде властивісь перечилятись в 
 //for...in чи ні
+}
