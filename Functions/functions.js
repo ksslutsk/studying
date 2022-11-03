@@ -1,4 +1,4 @@
-
+if (false) { 
 function Person(name) {
     this.name = name;
 }
@@ -70,4 +70,4 @@ console.log(calculator.add(10, 20)); //30
 console.log(calculator.addSomeNum(2));
 console.groupEnd();
 
-
+}
