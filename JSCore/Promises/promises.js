@@ -241,3 +241,9 @@ Promise.allSettled(urls.map(url => fetch(url)))
 //reject 
 // let promise = new Promise((resolve, reject) => reject(error));
 
+
+//стани промісу 
+//fullified - виконаний успішно
+//rejected - виконаний з помилкою
+//pending - виконується
+//setted - виконаний
