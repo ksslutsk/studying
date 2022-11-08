@@ -1,0 +1,2 @@
+https://javascript.info/settimeout-setinterval
+https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e
