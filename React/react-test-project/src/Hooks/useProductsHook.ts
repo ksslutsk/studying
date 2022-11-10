@@ -35,6 +35,6 @@ export const useProducts = (): useProductsHookInterface => {
   }, []);
 
   const hooks: useProductsHookInterface = { products, loading, error, addProduct };
-  //add interface for return!!!!
+
   return hooks;
 }

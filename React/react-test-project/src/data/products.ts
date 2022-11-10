@@ -1,6 +1,6 @@
-import { IProduct } from "../shared/models/models";
+import { ProductInterface } from "../shared/models/models";
 
-export const products: IProduct[] = [
+export const products: ProductInterface[] = [
     {
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
