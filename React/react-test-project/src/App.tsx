@@ -7,7 +7,7 @@ import { ProductPage } from './pages/ProductsPage';
 function App() {
   return (
     <>
-      <Navigation></Navigation>
+      <Navigation />
       <Routes>
         <Route path='/' element={<ProductPage />} />
         <Route path='/about' element={<AboutPage />} />

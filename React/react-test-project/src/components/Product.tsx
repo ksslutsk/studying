@@ -1,13 +1,11 @@
-//не обовʼязково писати в нових версіях реакт, але рекомендується лишати 
-import React, { useState } from "react";
-import { IProduct } from '../models';
+import { FunctionComponent, useState } from "react";
+import { ProductInterface } from '../shared/models/models';
 
 interface ProductProps {
-    product: IProduct
+    product: ProductInterface
 }
 
-
-export function Product({ product }: ProductProps) {
+export const Product: FunctionComponent<ProductProps> = ({ product }: ProductProps) => {
 
     const [details, setDetails] = useState(false);
 
@@ -20,18 +18,18 @@ export function Product({ product }: ProductProps) {
             <img src={product.image} alt={product.title} className="w-1/6" />
             <p>{product.title}</p>
             <p className="font-bold">{product.price}</p>
-            
+
             <button
                 className={btnClasses}
                 onClick={() => setDetails(prev => !prev)}
             >
-                {details ? ('Hide Details') : ('Show Details')}
+                {details ? 'Hide Details' : 'Show Details'}
             </button>
 
             {details &&
                 <div>
                     <p>{product.description}</p>
-                    <p>Rating: <span style={{fontWeight: "bold"}}>{product?.rating?.rate}</span></p>
+                    <p>Rating: <span style={{ fontWeight: "bold" }}>{product?.rating?.rate}</span></p>
                 </div>}
         </div>
     );

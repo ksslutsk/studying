@@ -1,28 +1,24 @@
-import { useContext, useState } from 'react';
+import { FunctionComponent, useContext, useState } from 'react';
 import { CreateProduct } from '../components/CreateProduct';
-import { ErrorMessage } from '../components/ErrorMessage';
-import { Loader } from '../components/Loader';
+import { ErrorMessage } from '../shared/components/ErrorMessage';
+import { Loader } from '../shared/components/Loader';
 import { Modal } from '../components/Modal';
 import { Product } from '../components/Product';
 import { ModalContext } from '../context/ModalContext';
-import { useProducts } from '../Hooks/products';
-import { IProduct } from '../models';
+import { useProducts } from '../Hooks/useProductsHook';
+import { ProductInterface } from '../shared/models/models';
 
-
-
-export function ProductPage() {
+export const ProductPage: FunctionComponent = () => {
 
     const { loading, products, error, addProduct } = useProducts();
 
     const { modal, open, close } = useContext(ModalContext);
 
-    const createHandler = (product: IProduct) => {
+    const createHandler = (product: ProductInterface) => {
         close();
         addProduct(product);
     }
 
-
-    
     return (
         <div className='container mx-auto max-w-2xl pt-5'>
             {loading && <Loader />}
@@ -40,5 +36,4 @@ export function ProductPage() {
             >+</button>
         </div>
     );
-
 }

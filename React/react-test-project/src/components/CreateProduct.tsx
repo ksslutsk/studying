@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { useState } from "react"
-import { IProduct } from "../models";
-import { ErrorMessage } from "./ErrorMessage";
+import React, { FunctionComponent, useState } from "react"
+import { ProductInterface } from "../shared/models/models";
+import { ErrorMessage } from "../shared/components/ErrorMessage";
 
-const productData: IProduct = {
+const productData: ProductInterface = {
     title: 'test product',
     price: 13.5,
     description: 'lorem ipsum set',
@@ -16,14 +16,13 @@ const productData: IProduct = {
 };
 
 interface CreateProductProps {
-    onCreate: (product: IProduct) => void
+    onCreate: (product: ProductInterface) => void
 }
 
-export function CreateProduct({ onCreate }: CreateProductProps) {
+export const CreateProduct: FunctionComponent<CreateProductProps> = ({ onCreate }: CreateProductProps) => {
 
     const [value, setValue] = useState('');
     const [error, setError] = useState('');
-
 
     const submitHandler = async (event: React.FormEvent) => {
         event.preventDefault();
@@ -36,7 +35,7 @@ export function CreateProduct({ onCreate }: CreateProductProps) {
         }
         productData.title = value;
 
-        const responce = await axios.post<IProduct>('https://fakestoreapi.com/products', productData);
+        const responce = await axios.post<ProductInterface>('https://fakestoreapi.com/products', productData);
 
         onCreate(responce.data);
     }

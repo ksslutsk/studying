@@ -6,7 +6,6 @@ interface IModalContext {
     close: () => void
 }
 
-
 export const ModalContext = createContext<IModalContext>({
     modal: false,
     open: () => { },
@@ -19,10 +18,9 @@ export const ModalState = ({ children }: { children: React.ReactNode }) => {
     const open = () => { setModal(true) };
     const close = () => { setModal(false) };
 
-
     return (
         <ModalContext.Provider value={{modal, open, close}}>
             {children}
         </ModalContext.Provider>
-    )
+    );
 }

@@ -1,11 +1,12 @@
+import { FunctionComponent } from "react";
+
 interface ModalProps {
-    children: React.ReactNode,
+    children: React.ReactNode,//how write it in func props
     title: string,
     onClose: () => void
 }
 
-
-export function Modal({ children, title, onClose }: ModalProps) {
+export const Modal: FunctionComponent<ModalProps> = ({ children, title, onClose }: ModalProps) => {
     return (
         <>
             <div className="fixed bg-black/50 top-0 right-0 left-0 bottom-0" onClick={onClose}></div>
