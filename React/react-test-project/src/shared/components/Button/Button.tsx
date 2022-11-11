@@ -30,7 +30,7 @@ export const Button: FunctionComponent<ButtonInterface> = ({ condition }: Button
     }
     
     return (
-        <button style={style}>
+        <button style={style} >
             Submit {condition === 'loading' && (<span>...</span>)}
         </button>
     )
