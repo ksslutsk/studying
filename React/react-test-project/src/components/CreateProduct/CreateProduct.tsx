@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { FunctionComponent, useState } from "react"
-import { ProductInterface } from "../shared/models/models";
-import { ErrorMessage } from "../shared/components/ErrorMessage";
+import React, { ChangeEvent, FunctionComponent, useState } from "react"
+import { ProductInterface } from "../../shared/models/models";
+import { ErrorMessage } from "../../shared/components/ErrorMessage/ErrorMessage";
 
 const productData: ProductInterface = {
     title: 'test product',
@@ -40,14 +40,13 @@ export const CreateProduct: FunctionComponent<CreateProductProps> = ({ onCreate 
         onCreate(responce.data);
     }
 
-    //це не працює зовсім ніяк
-    // function changeHandler(event: React.KeyboardEvent<HTMLInputElement>) {
-    //     setValue(event.target.value);
-    // }
+    const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        setValue(event.target.value);
+    }
 
     return (
         <form onSubmit={submitHandler}>
-            <input type="text" className="border py-2 px-4 mb-2 w-full" placeholder="Enter product title" value={value} onChange={event => setValue(event.target.value)} />
+            <input type="text" className="border py-2 px-4 mb-2 w-full" placeholder="Enter product title" value={value} onChange={changeHandler} />
 
             {error && <ErrorMessage error={error} />}
 

@@ -1,6 +1,6 @@
 import { ProductInterface } from "./models";
 
-export interface useProductsHookInterface {
+export interface ProductsHookReturnModel {
     products: ProductInterface[],
     loading: boolean,
     error: string,

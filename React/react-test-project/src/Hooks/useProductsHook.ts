@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import { ProductInterface } from "../shared/models/models";
 import axios, { AxiosError } from "axios";
-import { useProductsHookInterface } from "../shared/models/useProductsHookInterface";
+import { ProductsHookReturnModel } from "../shared/models/ProductsHookReturnModel";
 
-export const useProducts = (): useProductsHookInterface => {
+export const useProducts = (): ProductsHookReturnModel => {
 
   const [products, setProducts] = useState<ProductInterface[]>([]);
   const [loading, setLoading] = useState(false);
@@ -34,7 +34,5 @@ export const useProducts = (): useProductsHookInterface => {
     fetchProducts();
   }, []);
 
-  const hooks: useProductsHookInterface = { products, loading, error, addProduct };
-
-  return hooks;
+  return { products, loading, error, addProduct };
 }

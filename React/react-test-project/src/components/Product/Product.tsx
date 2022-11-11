@@ -1,5 +1,5 @@
 import { FunctionComponent, useState } from "react";
-import { ProductInterface } from '../shared/models/models';
+import { ProductInterface } from '../../shared/models/models';
 
 interface ProductProps {
     product: ProductInterface

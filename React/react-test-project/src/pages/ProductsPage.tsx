@@ -1,9 +1,9 @@
 import { FunctionComponent, useContext, useState } from 'react';
-import { CreateProduct } from '../components/CreateProduct';
-import { ErrorMessage } from '../shared/components/ErrorMessage';
-import { Loader } from '../shared/components/Loader';
-import { Modal } from '../components/Modal';
-import { Product } from '../components/Product';
+import { CreateProduct } from '../components/CreateProduct/CreateProduct';
+import { ErrorMessage } from '../shared/components/ErrorMessage/ErrorMessage';
+import { Loader } from '../shared/components/Loader/Loader';
+import { Modal } from '../components/Modal/Modal';
+import { Product } from '../components/Product/Product';
 import { ModalContext } from '../context/ModalContext';
 import { useProducts } from '../Hooks/useProductsHook';
 import { ProductInterface } from '../shared/models/models';
