@@ -1,0 +1,70 @@
+.button {
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.button--raised {
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.button--loading {
+    opacity: 0.6;
+}
+
+.button__size--small {
+    font-size: 0.875rem;
+    padding: 0.65625rem 1.09375rem;
+}
+
+.button__size--large {
+    font-size: 1.25rem;
+    padding: 0.9375rem 1.5625rem;
+}
+
+.rounded {
+    border-radius: 2rem;
+}
+
+.button__color--primary {
+    color: #6366F1;
+    background-color: #6366F1;
+    border: 1px solid #6366F1;
+}
+
+.button__color--secondary {
+    color: #64748B;
+    background-color: #64748B;
+    border: 1px solid #64748B;
+}
+
+.button__color--danger {
+    color: #EF4444;
+    background-color: #EF4444;
+    border: 1px solid #EF4444;
+}
+
+.button__color--warning {
+    color: #F59E0B;
+    background-color: #F59E0B;
+    border: 1px solid #F59E0B;
+}
+
+.button__color--success {
+    color: #22C55E;
+    background-color: #22C55E;
+    border: 1px solid #22C55E;
+}
+
+.button__variant--basic {
+    color: #fff;
+}
+
+.button__variant--outlined {
+    background-color: transparent;
+}
+
+.button__variant--text {
+    background-color: transparent;
+    border-color: transparent;
+}
