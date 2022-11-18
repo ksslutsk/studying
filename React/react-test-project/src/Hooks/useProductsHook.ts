@@ -4,11 +4,13 @@ import { ProductInterface } from "../shared/models/models";
 import axios, { AxiosError } from "axios";
 import { ProductsHookReturnModel } from "../shared/models/ProductsHookReturnModel";
 
+//перенести хуки до папок компонентів
+//переробити типізцію
 export const useProducts = (): ProductsHookReturnModel => {
 
   const [products, setProducts] = useState<ProductInterface[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState('');//errormessage
 
   const addProduct = (product: ProductInterface) => {
     setProducts(prev => [...prev, product]);

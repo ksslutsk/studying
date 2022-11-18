@@ -1,0 +1,42 @@
+.modal__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.modal__card {
+    z-index: 100;
+    background: white;
+    position: relative;
+    margin: 10rem auto;
+    border-radius: 3px;
+    max-width: 75%;
+    width: fit-content;
+    padding: 1rem 2rem;
+    outline: 0;
+}
+
+.modal__card--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    font-size: larger;
+}
+
+.modal__card--header h1 {
+    margin-right: 2rem;
+}
+
+.modal__card--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,32 @@
+.tooltip__wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.tooltip {
+    padding: .25rem .5rem;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    position: absolute;
+    color: white;
+}
+
+.tooltip--top {
+    top: -10px;
+    left: 50%;
+}
+
+.tooltip--bottom {
+    bottom: -10px;
+    left: 50%;
+}
+
+.tooltip--left {
+    top: 0;
+    left: -75px;
+}
+.tooltip--right {
+    top: 0;
+    right: -65px;
+}

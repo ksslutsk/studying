@@ -1,14 +1,15 @@
 import { ReactNode, ButtonHTMLAttributes, FunctionComponent } from "react";
 import clsx from 'clsx';
-import styles from "./btnStyle.module.css"
+import styles from "./Button.module.css"
 
+//додпти medium
 export enum ButtonVariant {
     TEXT = 'text',
     OUTLINED = 'outlined',
     BASIC = 'basic'
 }
 
-export enum Color {
+export enum ButtonColor {
     PRIMARY = '#6366F1',
     DANGER = '#EF4444',
     SECONDARY = '#64748B',
@@ -16,39 +17,41 @@ export enum Color {
     WARNING = '#F59E0B'
 }
 
-export enum Size {
-    SMALL, LARGE
+export enum ButtonSize {
+    SMALL = 'small',
+    MEDIUM = 'medium',
+    LARGE = 'large'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode,
     rounded?: boolean,
-    variant?: ButtonVariant, //uniion or enum of possible values 
-    size?: Size, //uniion or enum of possible values
+    variant?: ButtonVariant,
+    size?: ButtonSize,
     loading?: boolean,
     raised?: boolean,
-    color?: Color //uniion or enum and string for any other hex color of possible values
+    color?: ButtonColor
 }
 
-const getSize = (size: Size | undefined) => {
+const getSize = (size: ButtonSize | undefined) => {
     switch (size) {
-        case undefined: {
-            return '';
-        }
-        case Size.SMALL: {
+        case ButtonSize.SMALL: {
             return styles['button__size--small']
         }
-        case Size.LARGE: {
+        case ButtonSize.MEDIUM: {
+            return styles['button__size--medium']
+        }
+        case ButtonSize.LARGE: {
             return styles['button__size--large']
+        }
+        default: {
+            return styles['button__size--medium']
         }
     }
 }
 
 const getVariant = (variant: ButtonVariant | undefined) => {
     switch (variant) {
-        case undefined: {
-            return styles['button__variant--basic'];
-        }
         case ButtonVariant.BASIC: {
             return styles['button__variant--basic'];
         }
@@ -58,28 +61,31 @@ const getVariant = (variant: ButtonVariant | undefined) => {
         case ButtonVariant.TEXT: {
             return styles['button__variant--text'];
         }
+        default: {
+            return styles['button__variant--basic'];
+        }
     }
 }
 
-const getColor = (color: Color | undefined) => {
+const getColor = (color: ButtonColor | undefined) => {
     switch (color) {
-        case undefined: {
-            return styles['button__color--primary']
-        }
-        case Color.DANGER: {
+        case ButtonColor.DANGER: {
             return styles['button__color--danger']
         }
-        case Color.PRIMARY: {
+        case ButtonColor.PRIMARY: {
             return styles['button__color--primary']
         }
-        case Color.SECONDARY: {
+        case ButtonColor.SECONDARY: {
             return styles['button__color--secondary']
         }
-        case Color.WARNING: {
+        case ButtonColor.WARNING: {
             return styles['button__color--warning']
         }
-        case Color.SUCCESS: {
+        case ButtonColor.SUCCESS: {
             return styles['button__color--success']
+        }
+        default: {
+            return styles['button__color--primary']
         }
     }
 }
@@ -96,7 +102,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
     color,
     ...props
 }) => {
-    console.log(getColor(color))
+    //console.log(getColor(color))
     return (
         <button {...props} disabled={loading}
             className={clsx([

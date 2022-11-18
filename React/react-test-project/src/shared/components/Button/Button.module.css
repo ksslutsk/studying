@@ -1,7 +1,5 @@
 .button {
     border-radius: 6px;
-    font-size: 1rem;
-    padding: 0.75rem 1.25rem;
 }
 
 .button--raised {
@@ -15,6 +13,11 @@
 .button__size--small {
     font-size: 0.875rem;
     padding: 0.65625rem 1.09375rem;
+}
+
+.button__size--medium {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
 }
 
 .button__size--large {
