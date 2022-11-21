@@ -1,20 +1,29 @@
-import { FunctionComponent, useState } from "react";
-import { Button, ButtonColor, ButtonVariant, ButtonSize } from "../shared/components/Button/Button";
+import { FunctionComponent, useMemo, useState } from "react";
+import { Button } from "../shared/components/Button/Button";
+import { ButtonColor, ButtonVariant, ButtonSize } from '../shared/API/Enums'
 import { Modal } from "../shared/components/Modal/Modal";
 
 export const AboutPage: FunctionComponent = () => {
     const [isShowing, setShowing] = useState(false);
+    const [expCalcVar, setVar] = useState(10);
 
+    const expenciveCalculation = (a: number) => {
+        return Math.pow(a, 10);
+    }
+
+    const memoizedValue = useMemo(() => expenciveCalculation(expCalcVar), [expCalcVar]);
     return (
         <div>
             <div>
-                <Button variant={ButtonVariant.OUTLINED} color={ButtonColor.PRIMARY}>Primary outlined</Button>
-                <Button variant={ButtonVariant.TEXT} color={ButtonColor.SECONDARY}>Secondary text</Button>
-                <Button color={ButtonColor.WARNING}>Warning</Button>
-                <Button variant={ButtonVariant.BASIC} color={ButtonColor.DANGER} size={ButtonSize.SMALL}>Danger basic small</Button>
-                <Button color={ButtonColor.SUCCESS} onClick={() => { console.log('clicked success button') }}>Success</Button>
-                <Button size={ButtonSize.LARGE}>Large</Button>
-
+                <Button size={ButtonSize.LARGE}
+                    onClick={() => {
+                        setVar(p => ++p);
+                        console.log(expCalcVar)
+                    }}
+                >Change value</Button>
+                <div>
+                    <label>memoized value: {memoizedValue}</label>
+                </div>
             </div>
             <div>
                 <h1>Modal window zone</h1>
@@ -28,6 +37,7 @@ export const AboutPage: FunctionComponent = () => {
                     </ul> */}
                 {isShowing && <Modal hide={() => setShowing(false)}></Modal>}
             </div>
+
         </div>
     );
 }

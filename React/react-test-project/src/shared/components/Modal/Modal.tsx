@@ -1,6 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
 import ReactDOM from "react-dom";
-import { Button, ButtonVariant, ButtonSize } from "../Button/Button";
+import { Button } from "../Button/Button";
+import { ButtonVariant, ButtonSize } from '../../API/Enums'
 import { ToolTip, ToolTipDirection } from "../ToolTip/ToolTip";
 import styles from './Modal.module.css';
 

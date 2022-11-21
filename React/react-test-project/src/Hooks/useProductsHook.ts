@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 import { ProductInterface } from "../shared/models/models";
 import axios, { AxiosError } from "axios";
-import { ProductsHookReturnModel } from "../shared/models/ProductsHookReturnModel";
+import { ProductsHookReturn } from "../shared/models/models";
 
 //перенести хуки до папок компонентів
 //переробити типізцію
-export const useProducts = (): ProductsHookReturnModel => {
+export const useProducts = (): ProductsHookReturn => {
 
   const [products, setProducts] = useState<ProductInterface[]>([]);
   const [loading, setLoading] = useState(false);

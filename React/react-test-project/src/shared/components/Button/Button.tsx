@@ -1,27 +1,7 @@
 import { ReactNode, ButtonHTMLAttributes, FunctionComponent } from "react";
 import clsx from 'clsx';
 import styles from "./Button.module.css"
-
-//додпти medium
-export enum ButtonVariant {
-    TEXT = 'text',
-    OUTLINED = 'outlined',
-    BASIC = 'basic'
-}
-
-export enum ButtonColor {
-    PRIMARY = '#6366F1',
-    DANGER = '#EF4444',
-    SECONDARY = '#64748B',
-    SUCCESS = '#22C55E',
-    WARNING = '#F59E0B'
-}
-
-export enum ButtonSize {
-    SMALL = 'small',
-    MEDIUM = 'medium',
-    LARGE = 'large'
-}
+import {ButtonColor, ButtonSize, ButtonVariant} from '../../API/Enums'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode,
@@ -89,8 +69,6 @@ const getColor = (color: ButtonColor | undefined) => {
         }
     }
 }
-
-// make format on save
 
 export const Button: FunctionComponent<ButtonProps> = ({
     children,

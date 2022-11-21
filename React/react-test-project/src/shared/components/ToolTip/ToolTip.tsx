@@ -1,5 +1,5 @@
 import { FunctionComponent, ReactNode, useState } from "react";
-import styles from './tooltip.module.css'
+import styles from './Tooltip.module.css'
 import clsx from 'clsx';
 
 interface ToolTipProps {
