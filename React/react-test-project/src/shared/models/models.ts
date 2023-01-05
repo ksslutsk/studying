@@ -12,3 +12,10 @@ export interface ProductInterface {
     image: string,
     rating: RatingInterface
 }
+
+export interface ProductsHookReturn {
+    products: ProductInterface[],
+    loading: boolean,
+    error: string,
+    addProduct: (p: ProductInterface) => void
+}
